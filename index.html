@@ -19,7 +19,8 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(44, 95, 45, 0.7), rgba(26, 58, 27, 0.7)), url('hero-image.jpg') center/cover;
+            /* UPDATED: Pointing to the new image path in the images folder */
+            background: linear-gradient(rgba(44, 95, 45, 0.7), rgba(26, 58, 27, 0.7)), url('images/wescoastyardbirds_home_page.avif') center/cover;
             color: white;
             padding: 8rem 1rem;
             text-align: center;
@@ -34,6 +35,8 @@
             font-size: 3rem;
             margin-bottom: 1rem;
             font-weight: 700;
+            /* Added subtle shadow for extra readability */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .hero p {
@@ -41,14 +44,18 @@
             margin-bottom: 1.5rem;
             max-width: 600px;
             opacity: 0.95;
+            /* Added subtle shadow for extra readability */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
 
         .contact-header {
-            background: rgba(0, 0, 0, 0.3);
+            /* Updated transparency to 0.5 for better contrast */
+            background: rgba(0, 0, 0, 0.5);
             padding: 1.5rem;
             border-radius: 8px;
             margin-top: 2rem;
             max-width: 500px;
+            backdrop-filter: blur(2px); /* Optional: adds a slight blur behind the text */
         }
 
         .contact-header p {
