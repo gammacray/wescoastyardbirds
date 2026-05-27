@@ -19,7 +19,6 @@
 
         /* Hero Section */
         .hero {
-            /* UPDATED: Pointing to the new image path in the images folder */
             background: linear-gradient(rgba(44, 95, 45, 0.3), rgba(26, 58, 27, 0.3)), url('images/wescoastyardbirds_home_page.avif') center/cover;
             color: white;
             padding: 8rem 1rem;
@@ -35,7 +34,6 @@
             font-size: 3rem;
             margin-bottom: 1rem;
             font-weight: 700;
-            /* Added subtle shadow for extra readability */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
@@ -44,18 +42,16 @@
             margin-bottom: 1.5rem;
             max-width: 600px;
             opacity: 0.95;
-            /* Added subtle shadow for extra readability */
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
 
         .contact-header {
-            /* Updated transparency to 0.5 for better contrast */
             background: rgba(0, 0, 0, 0.5);
             padding: 1.5rem;
             border-radius: 8px;
             margin-top: 2rem;
             max-width: 500px;
-            backdrop-filter: blur(2px); /* Optional: adds a slight blur behind the text */
+            backdrop-filter: blur(2px);
         }
 
         .contact-header p {
@@ -126,6 +122,60 @@
             color: #555;
             line-height: 1.8;
             font-size: 1.05rem;
+        }
+
+        /* Team Section Styles */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .team-member {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .team-image-placeholder {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 1.5rem;
+            background: #e0e0e0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #999;
+        }
+
+        .team-name {
+            color: #2c5f2d;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-title {
+            color: #2c5f2d; /* Fixed: Changed from light green to dark green to match headers */
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-bio {
+            color: #555;
+            line-height: 1.7;
+            font-size: 0.95rem;
         }
 
         /* Contact Form Section */
@@ -200,63 +250,10 @@
             margin-top: 4rem;
         }
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .footer-section h3 {
-            color: #90ee90;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-section p {
-            margin: 0.5rem 0;
-            line-height: 1.8;
-        }
-
-        .footer-section a {
-            color: #90ee90;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: white;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 0.5rem;
-        }
-
-        .social-links a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: #2c5f2d;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            font-size: 1.2rem;
-        }
-
-        .social-links a:hover {
-            background: #90ee90;
-            color: #1a3a1b;
-        }
-
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            margin-top: 2rem;
+            margin-top: 0; /* Removed top margin since we removed other sections */
             border-top: 1px solid #2c5f2d;
             opacity: 0.8;
         }
@@ -293,10 +290,6 @@
             .service-image img {
                 height: 250px;
             }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -306,7 +299,7 @@
         <h1>Wes-Coast Yardbirds</h1>
         <p>Transforming outdoor spaces into beautiful, functional landscapes across Parksville and Vancouver Island.</p>
         <div class="contact-header">
-            <p><strong>250-228-0819</strong></p>
+            <p><strong>250-228-0819 (Call & Text)</strong></p>
             <p>tpni@telus.net</p>
             <strong style="margin-top: 1rem; font-size: 0.95rem;">Ready to start your project? Get in touch.</strong>
         </div>
@@ -379,38 +372,34 @@
         </section>
 
         <!-- Meet Our Team Section -->
-<section id="team">
-    <h2>Meet Our Team</h2>
-    <p style="text-align: center; color: #555; font-size: 1.1rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-        Our team is made up of dedicated and skilled professionals who are committed to delivering high-quality workmanship and exceptional customer service.
-    </p>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; margin-bottom: 2rem;">
-        <!-- Team Member 1 -->
-        <div style="background: #f9f9f9; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 16px rgba(0, 0, 0, 0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.08)';">
-            <div style="width: 180px; height: 180px; margin: 0 auto 1.5rem; background: #e0e0e0; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #999;">
-                IMAGE
-            </div>
-            <h3 style="color: #2c5f2d; font-size: 1.5rem; margin-bottom: 0.5rem;">Ruth Owens</h3>
-            <p style="color: #90ee90; font-weight: 600; font-size: 1.05rem; margin-bottom: 1rem;">Chief Gardener</p>
-            <p style="color: #555; line-height: 1.7; font-size: 0.95rem;">
-                Ruth has over 10 years of experience in gardening and landscaping. She is passionate about creating beautiful and sustainable outdoor spaces that enhance people's lives. Ruth is committed to using eco-friendly practices and materials in all of her work.
+        <section id="team">
+            <h2>Meet Our Team</h2>
+            <p style="text-align: center; color: #555; font-size: 1.1rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Our team is made up of dedicated and skilled professionals who are committed to delivering high-quality workmanship and exceptional customer service.
             </p>
-        </div>
+            
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                    <div class="team-image-placeholder">IMAGE</div>
+                    <h3 class="team-name">Ruth Owens</h3>
+                    <p class="team-title">Chief Gardener</p>
+                    <p class="team-bio">
+                        Ruth has over 10 years of experience in gardening and landscaping. She is passionate about creating beautiful and sustainable outdoor spaces that enhance people's lives. Ruth is committed to using eco-friendly practices and materials in all of her work.
+                    </p>
+                </div>
 
-        <!-- Team Member 2 -->
-        <div style="background: #f9f9f9; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 16px rgba(0, 0, 0, 0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.08)';">
-            <div style="width: 180px; height: 180px; margin: 0 auto 1.5rem; background: #e0e0e0; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #999;">
-                IMAGE
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <div class="team-image-placeholder">IMAGE</div>
+                    <h3 class="team-name">Jerard Lewis</h3>
+                    <p class="team-title">Landscape Designer</p>
+                    <p class="team-bio">
+                        Jerard is a creative and talented landscape designer with a keen eye for detail. He has a degree in landscape architecture and over 5 years of experience in the industry. Jerard is passionate about creating unique and functional designs that reflect his clients' personalities and lifestyles.
+                    </p>
+                </div>
             </div>
-            <h3 style="color: #2c5f2d; font-size: 1.5rem; margin-bottom: 0.5rem;">Jerard Lewis</h3>
-            <p style="color: #90ee90; font-weight: 600; font-size: 1.05rem; margin-bottom: 1rem;">Landscape Designer</p>
-            <p style="color: #555; line-height: 1.7; font-size: 0.95rem;">
-                Jerard is a creative and talented landscape designer with a keen eye for detail. He has a degree in landscape architecture and over 5 years of experience in the industry. Jerard is passionate about creating unique and functional designs that reflect his clients' personalities and lifestyles.
-            </p>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- Contact Form Section -->
         <section class="contact-section">
@@ -439,26 +428,6 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p><strong>Phone:</strong><br>250-228-0819</p>
-                <p><strong>Email:</strong><br><a href="mailto:tpni@telus.net">tpni@telus.net</a></p>
-            </div>
-            <div class="footer-section">
-                <h3>Service Area</h3>
-                <p>Parksville, BC</p>
-                <p>Vancouver Island</p>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-links">
-                    <!-- Replace with actual social links if he has them -->
-                    <a href="#" title="Facebook">f</a>
-                    <a href="#" title="Instagram">📷</a>
-                </div>
-            </div>
-        </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Wes-Coast Yardbirds. All rights reserved.</p>
         </div>
