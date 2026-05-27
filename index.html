@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wes-Coast Yardbirds | Landscaping & Yard Design | Parksville, BC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 95, 45, 0.7), rgba(26, 58, 27, 0.7)), url('hero-image.jpg') center/cover;
+            color: white;
+            padding: 8rem 1rem;
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            opacity: 0.95;
+        }
+
+        .contact-header {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            max-width: 500px;
+        }
+
+        .contact-header p {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-header strong {
+            display: block;
+            margin-top: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        section {
+            margin: 3rem 0;
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            color: #2c5f2d;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-left: 5px solid #2c5f2d;
+            border-radius: 4px;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .service-card h3 {
+            color: #2c5f2d;
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Contact Form Section */
+        .contact-section {
+            background: #f4f4f4;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #2c5f2d;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2c5f2d;
+            box-shadow: 0 0 0 3px rgba(44, 95, 45, 0.1);
+        }
+
+        .btn {
+            background: #2c5f2d;
+            color: white;
+            padding: 0.85rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #1a3a1b;
+        }
+
+        footer {
+            background: #1a3a1b;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 1rem;
+                min-height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Wes-Coast Yardbirds</h1>
+        <p>Transforming outdoor spaces into beautiful, functional landscapes across Parksville and Vancouver Island.</p>
+        <div class="contact-header">
+            <p><strong>250-228-0819</strong></p>
+            <p>tpni@telus.net</p>
+            <strong style="margin-top: 1rem; font-size: 0.95rem;">Ready to start your project? Get in touch.</strong>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="container">
+        <section id="services">
+            <h2>What We Do</h2>
+            <div class="services">
+                <div class="service-card">
+                    <h3>Arbors & Pergolas</h3>
+                    <p>Custom-designed structures that add character, shade, and visual interest to your outdoor space. Perfect for defining garden areas and creating gathering spots.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Paving Stones & Walkways</h3>
+                    <p>Durable hardscaping for patios, driveways, and pathways. We design intricate patterns and layouts that blend function with beauty.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Water Features</h3>
+                    <p>Custom ponds and water elements that bring life and tranquility to your yard. A timeless way to elevate your landscape design.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Retaining Walls</h3>
+                    <p>Structural solutions that prevent erosion while adding dimension and definition to your landscape. Built to last and look great.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Planting & Garden Design</h3>
+                    <p>Professional plant selection and landscape design for year-round interest. We create gardens that thrive in your local climate.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Xeriscaping & Low-Maintenance Design</h3>
+                    <p>Water-efficient landscaping that reduces maintenance and environmental impact. Beautiful and sustainable outdoor spaces.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-section">
+            <h2>Get a Free Consultation</h2>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone (optional)</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell us about your project</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Inquiry</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Wes-Coast Yardbirds. All rights reserved.</p>
+        <p>Serving Parksville and surrounding Vancouver Island communities.</p>
+    </footer>
+</body>
+</html>
